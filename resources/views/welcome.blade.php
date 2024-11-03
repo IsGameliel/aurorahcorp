@@ -456,7 +456,7 @@
             <h4><sup>$</sup>0<span> / month</span></h4>
             <p class="text-center small">Duration: Unlimited</p>
             <p class="text-center small"><strong>ROI:</strong> Limited but ideal for learning the basics</p>
-            <a href="#" class="cta-btn">Start Free</a>
+            <a href="/plan" class="cta-btn">Start Free</a>
             <ul>
               <li><i class="bi bi-check"></i> Basic feature access</li>
               <li><i class="bi bi-check"></i> Essential support</li>
@@ -477,7 +477,7 @@
             <h4><sup>$</sup>29<span> / month</span></h4>
             <p class="text-center small">Duration: Monthly</p>
             <p class="text-center small"><strong>ROI:</strong> High value with expanded features for business growth</p>
-            <a href="#" class="cta-btn">Start Free Trial</a>
+            <a href="/plan" class="cta-btn">Start Now</a>
             <ul>
               <li><i class="bi bi-check"></i> Everything in Free</li>
               <li><i class="bi bi-check"></i> Priority support</li>
@@ -497,7 +497,7 @@
             <h4><sup>$</sup>49<span> / month</span></h4>
             <p class="text-center small">Duration: Monthly</p>
             <p class="text-center small"><strong>ROI:</strong> Maximum ROI for developers with premium support and tools</p>
-            <a href="#" class="cta-btn">Start Free Trial</a>
+            <a href="/plan" class="cta-btn">Start Now</a>
             <ul>
               <li><i class="bi bi-check"></i> Everything in Business</li>
               <li><i class="bi bi-check"></i> Dedicated account manager</li>
@@ -616,7 +616,7 @@
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <p>contact@aurorahcorp.com</p>
               </div>
             </div><!-- End Info Item -->
 

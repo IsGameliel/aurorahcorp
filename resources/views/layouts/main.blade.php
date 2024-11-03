@@ -34,7 +34,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">Aurohrahcop</h1>
+        <h1 class="sitename">Aurorahcorp</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -51,9 +51,9 @@
         @if (Route::has('login'))
             @auth
             <li>
-                <a href="{{ url('/dashboard') }}">
-                    Dashboard
-                </a>
+                @if(Auth::check())
+                    <a href="{{ Auth::user()->role == 'admin' ? url('admin/dashboard') : url('user/dashboard') }}">Dashboard</a>
+                @endif
             </li>
             @else
             <li>
