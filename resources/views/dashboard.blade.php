@@ -7,37 +7,27 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <h2 class="font-semibold text-xl mb-4">Your Plans</h2>
-
-                    @foreach($plans as $plan)
-                        <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-md mb-4">
-                            <div class="p-4">
-                                <!-- Plan Name and Amount -->
-                                <h3 class="text-lg font-semibold">Plan: {{ $plan->plan }}</h3>
-                                <p class="text-gray-500 dark:text-gray-300">Amount: ${{ $plan->amount }}</p>
-
-                                <!-- Short Description -->
-                                <p class="mt-2 text-gray-600 dark:text-gray-400">
-                                    {{ $plan->description }}
-                                </p>
-
-                                <!-- Withdrawal Button -->
-                                <div class="mt-4">
-                                    <a href="{{ route('withdrawal', ['plan_id' => $plan->id]) }}" style="background-color: black;" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                                        Withdraw
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-
-                    @if($plans->isEmpty())
-                        <p class="text-gray-600 dark:text-gray-400">You have no active plans.</p>
-                    @endif
+            <!-- Three-Column Layout for Plans (Left) and Wallet (Right) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
+                <!-- Your Plans Section (Left) -->
+                <div class="col-span-1 mt-8"> <!-- Added top margin here -->
+                    <x-plan-list :plans="$plans" />
                 </div>
 
+                <!-- Wallet Section (Middle) -->
+                <div class="col-span-1 mt-8"> <!-- Added top margin here -->
+                    <x-wallet-card :wallet="$wallet" />
+                </div>
+            </div>
+
+            <!-- Full-Width Transaction Section (spanning all columns) -->
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-8" style="margin-top: 2rem;"> <!-- Added top margin here -->
+                <div class="p-6 text-gray-900 dark:text-gray-100 mt-8">
+                    <h3 class="font-semibold text-xl mb-4">Recent Transactions</h3>
+
+                    <!-- Transaction List Component -->
+                    <x-transaction-list :transactions="$transactions" />
+                </div>
             </div>
         </div>
     </div>
