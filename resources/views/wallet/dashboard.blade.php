@@ -27,16 +27,7 @@
                         @endforeach
                     </ul>
                 </div>
-
-                <!-- Add Funds and Withdraw Buttons -->
-                <div class="flex gap-4">
-                    {{-- <a href="{{ route('wallet.addFundsForm') }}" class="px-6 py-3 text-white bg-black hover:bg-blue-700 rounded-lg transition duration-300">Add Funds</a> --}}
-                    <form action="{{ route('wallet.withdrawFunds') }}" method="POST" class="flex items-center gap-2 w-full">
-                        @csrf
-                        <input type="number" name="amount" min="1" class="p-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Amount to withdraw" required>
-                        <button type="submit" class="px-6 py-3 text-white bg-red-600 hover:bg-red-700 rounded-lg transition duration-300">Withdraw</button>
-                    </form>
-                </div>
+                <a href="{{ route('wallet.withdrawFundsForm')}}" class="px-6 py-3 text-white bg-red-600 hover:bg-red-700 rounded-lg transition duration-300 w-full">Request Withdrawal</a >
             </div>
         </div>
     </div>
