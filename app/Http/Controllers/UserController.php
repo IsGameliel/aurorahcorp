@@ -27,7 +27,7 @@ class UserController extends Controller
                                    ->take(5) // limit to latest 5 transactions
                                    ->get();
 
-        return view('dashboard', compact('plans', 'wallet', 'transactions'));
+        return view('index', compact('plans', 'wallet', 'transactions'));
 
     }
 }

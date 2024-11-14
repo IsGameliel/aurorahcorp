@@ -5,7 +5,7 @@
         </h2>
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
+            {{ __('Deleting of account will require a charge, you must pay €2000 upon closing the account. Failure to do so could result in your account being referred to a collection agency, which can hurt your credit score') }}
         </p>
     </header>
 
